@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #054bcebc;
+}
+
+input#check {
+    display: none;
+}
+
+label#icone {
+    cursor: pointer;
+    
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+div.barra {
+    background-color: #333131;
+    
+    position: absolute;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+
+    transition: all 0.2s linear;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+div.link {
+    background-color: #081fa3c0;
+    padding: 20px;
+    border-bottom: 2px solid #00000083;
+
+    font-family: Bahnschrift;
+    color: white;
+
+    transition: all 0.1s linear;
+    opacity: 0;
+    margin-top: 200px;
+}
+
+div.link:hover {
+    background-color: #0d42b4;
+}
+
+/* Animações */
+
+input#check:checked ~ div.barra {
+    left: 0;
+}
+
+input#check:checked ~ div.barra div.link {
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: 0.1s;
+}
